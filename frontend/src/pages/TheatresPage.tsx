@@ -16,12 +16,7 @@ import {
 import toast from "react-hot-toast";
 import { useEffect } from "react";
 
-type Theatre = {
-  id: number;
-  name: string;
-  city: string;
-  facilities: string[];
-};
+
 
 function getFacilityIcon(facility: string) {
   switch (facility) {

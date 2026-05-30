@@ -209,33 +209,5 @@ export default function AddTheatrePage() {
   );
 }
 
-/* REUSABLE INPUT */
-type InputProps = {
-  icon: React.ReactNode;
-  label: string;
-  placeholder: string;
-};
 
-function InputBox({
-  icon,
-  label,
-  placeholder,
-}: InputProps) {
-  return (
-    <div className="rounded-xl border border-white/60 bg-white/80 p-4">
-      <label className="mb-2 flex items-center gap-2 text-sm font-medium text-[#6B6B7E]">
-        <span className="text-[#6D5EF5]">
-          {icon}
-        </span>
 
-        {label}
-      </label>
-
-      <input
-        type="text"
-        placeholder={placeholder}
-        className="w-full bg-transparent text-sm outline-none placeholder:text-[#6B6B7E]"
-      />
-    </div>
-  );
-}
