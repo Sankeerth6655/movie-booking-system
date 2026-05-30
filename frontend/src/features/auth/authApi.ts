@@ -30,10 +30,12 @@ interface RegisterResponse {
     role:string
 }
 
+const API = import.meta.env.VITE_BACKEND_URL;
+
 export const authApi = createApi({
     reducerPath:"authApi",
     baseQuery:fetchBaseQuery({
-        baseUrl:'http://localhost:5000',
+        baseUrl:`${API}`,
     }),
     endpoints:(builder)=>({
         login: builder.mutation<LoginResponse,LoginRequest>({

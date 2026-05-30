@@ -1,9 +1,11 @@
 import dotenv from 'dotenv';
+dotenv.config();
+
 import { connectDB } from './config/db';
 import { app } from './app';
 
-dotenv.config();
 connectDB();
-app.listen(process.env.PORT,()=>{
-    console.log(`Server connected on: http://localhost:${process.env.PORT}`);
+const PORT = process.env.PORT || 3500;
+app.listen(PORT,()=>{
+    console.log(`Server running on: http://localhost:${PORT}`);
 })

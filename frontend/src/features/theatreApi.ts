@@ -12,10 +12,12 @@ interface theatreRequest{
     facilities:string[]
 }
 
+const API = import.meta.env.VITE_BACKEND_URL;
+
 export const theatreApi = createApi({
     reducerPath:'theatreApi',
     baseQuery:fetchBaseQuery({
-        baseUrl:'http://localhost:5000'
+        baseUrl:`${API}`
     }),
     tagTypes:["Theatre"],
     endpoints:(builder)=>({

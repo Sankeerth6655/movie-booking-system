@@ -28,11 +28,12 @@ interface MovieResponse{
     censorCertificate:string,
     posterURL:string
 }
+const API = import.meta.env.VITE_BACKEND_URL;
 
 export const moviesApi = createApi({
     reducerPath:"moviesApi",
     baseQuery:fetchBaseQuery({
-        baseUrl:"http://localhost:5000"
+        baseUrl:`${API}`
     }),
     tagTypes:["Movie"],
     endpoints:(builder)=>({

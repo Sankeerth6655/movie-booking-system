@@ -21,10 +21,12 @@ interface createTicketRequest{
     ticketDetails:ticketRequest,
 }
 
+const API = import.meta.env.VITE_BACKEND_URL;
+
 export const ticketApi = createApi({
     reducerPath:'ticketApi',
     baseQuery:fetchBaseQuery({
-        baseUrl:'http://localhost:5000/ticket'
+        baseUrl:`${API}/ticket`
     }),
     tagTypes:["Ticket"],
     endpoints:(builder)=>({
